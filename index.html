@@ -1,201 +1,78 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>MAA Jagdamba Tour & Travel</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background: linear-gradient(to right,#1e3c72,#2a5298);
-color:white;
-text-align:center;
-}
-
-.container{
-background:white;
-color:black;
-width:90%;
-max-width:700px;
-margin:30px auto;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
-
-button{
-padding:12px 20px;
-background:green;
-color:white;
-border:none;
-border-radius:5px;
-font-size:16px;
-cursor:pointer;
-margin-top:10px;
-}
-
-button:hover{background:darkgreen;}
-
-input,select,textarea{
-width:90%;
-padding:10px;
-margin:5px;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-.gallery{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-justify-content:center;
-margin-top:20px;
-}
-
-.place{
-width:280px;
-background:white;
-color:black;
-padding:10px;
-border-radius:10px;
-}
-</style>
-</head>
-
-<body>
-
-<h1>🚖 MAA Jagdamba Tour & Travel</h1>
-<p>📍 Sarath, Deoghar, Jharkhand</p>
-
-<div class="container">
-
-<h3>Our Services</h3>
-<p>✔️ 26 Seater Bus (AC / Non-AC)</p>
-<p>✔️ Car Rental</p>
-<p>✔️ All India Temple Tour</p>
-<p>✔️ Airport Pickup</p>
-
-<h3>Online Booking</h3>
-
-<form onsubmit="sendToWhatsApp(); return false;">
-
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="mobile" placeholder="Mobile Number" required>
-<input type="text" id="pickup" placeholder="Pickup Location" required>
-<input type="text" id="drop" placeholder="Drop Location" required>
-<input type="date" id="date" required>
-<input type="number" id="passengers" placeholder="Number of Passengers" required>
-
-<select id="bus">
-<option>26 Seater AC</option>
-<option>26 Seater Non-AC</option>
-</select>
-
-<textarea id="message" placeholder="Extra Details" rows="3"></textarea>
-
-<button type="submit">Submit Booking</button>
-
-</form>
-
-<br>
-
-<a href="https://wa.me/919102386420">
-<button>📲 Chat on WhatsApp</button>
-</a>
-<br>
-<a href="tel:919102386420">
-<button style="background:#007bff;">📞 Call Now</button>
-</a>
-
-</div>
-
 <!-- VARANASI -->
 <h2>🛕 Varanasi</h2>
 <div class="gallery">
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?kashi-vishwanath-temple" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Kashi_Vishwanath_Temple.jpg" width="100%">
 <h4>Kashi Vishwanath Temple</h4>
 </div>
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?dashashwamedh-ghat" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Dashashwamedh_Ghat_Varanasi.jpg" width="100%">
 <h4>Dashashwamedh Ghat</h4>
 </div>
+
 </div>
+
 
 <!-- PURI -->
 <h2>🌊 Puri</h2>
 <div class="gallery">
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?jagannath-temple-puri" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Jagannath_Temple_Puri.jpg" width="100%">
 <h4>Jagannath Temple</h4>
 </div>
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?puri-beach" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Puri_Beach.jpg" width="100%">
 <h4>Puri Beach</h4>
 </div>
+
 </div>
+
 
 <!-- RAJRAPPA -->
 <h2>🙏 Rajrappa</h2>
 <div class="gallery">
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?rajrappa-temple" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Chhinnamasta_Temple_Rajrappa.jpg" width="100%">
 <h4>Chhinnamasta Temple</h4>
 </div>
+
 </div>
+
 
 <!-- UJJAIN -->
 <h2>🕉 Ujjain</h2>
 <div class="gallery">
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?mahakaleshwar-temple" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Mahakaleshwar_Temple_Ujjain.jpg" width="100%">
 <h4>Mahakaleshwar Temple</h4>
 </div>
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?ujjain-ghat" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Ujjain_Ram_Ghat.jpg" width="100%">
 <h4>Ujjain Ghat</h4>
 </div>
+
 </div>
+
 
 <!-- UTTARAKHAND -->
 <h2>🏔 Uttarakhand</h2>
 <div class="gallery">
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?kedarnath-temple" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Kedarnath_Temple.jpg" width="100%">
 <h4>Kedarnath Temple</h4>
 </div>
+
 <div class="place">
-<img src="https://source.unsplash.com/400x300/?badrinath-temple" width="100%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Badrinath_Temple.jpg" width="100%">
 <h4>Badrinath Temple</h4>
 </div>
+
 </div>
-
-<script>
-function sendToWhatsApp(){
-var name=document.getElementById("name").value;
-var mobile=document.getElementById("mobile").value;
-var pickup=document.getElementById("pickup").value;
-var drop=document.getElementById("drop").value;
-var date=document.getElementById("date").value;
-var passengers=document.getElementById("passengers").value;
-var bus=document.getElementById("bus").value;
-var message=document.getElementById("message").value;
-
-var url="https://wa.me/919102386420?text="
-+"🚌 *MAA Jagdamba Tour Booking* %0a"
-+"Name: "+name+"%0a"
-+"Mobile: "+mobile+"%0a"
-+"Pickup: "+pickup+"%0a"
-+"Drop: "+drop+"%0a"
-+"Date: "+date+"%0a"
-+"Passengers: "+passengers+"%0a"
-+"Bus Type: "+bus+"%0a"
-+"Details: "+message;
-
-window.open(url,'_blank').focus();
-}
-</script>
-
-</body>
-</html>
