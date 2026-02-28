@@ -166,8 +166,7 @@ text-decoration:none;
 </select>
 
 <textarea placeholder="Extra Details"></textarea>
-<button>Submit Booking</button>
-</div>
+<button onclick="sendWhatsApp()">Submit Booking</button>
 
 <div class="section">
 <h3>📞 Contact Numbers</h3>
@@ -300,6 +299,36 @@ document.getElementById("tripDuration").innerHTML=
 document.getElementById("travelDate").addEventListener("change",calculateDays);
 document.getElementById("returnDate").addEventListener("change",calculateDays);
 </script>
+<script>
+function sendWhatsApp(){
 
+var name = document.querySelector("input[placeholder='Your Name']").value;
+var mobile = document.querySelector("input[placeholder='Mobile Number']").value;
+var pickup = document.querySelector("input[placeholder='Pickup Location']").value;
+var drop = document.querySelector("input[placeholder='Drop Location']").value;
+var travel = document.getElementById("travelDate").value;
+var returnDate = document.getElementById("returnDate").value;
+var vehicle = document.querySelector("select").value;
+
+var message = "🚍 *New Booking Request* %0A%0A"
++ "👤 Name: " + name + "%0A"
++ "📞 Mobile: " + mobile + "%0A"
++ "📍 Pickup: " + pickup + "%0A"
++ "🏁 Drop: " + drop + "%0A"
++ "📅 Travel Date: " + travel + "%0A"
++ "📆 Return Date: " + returnDate + "%0A"
++ "🚐 Vehicle: " + vehicle;
+
+var numbers = [
+"919102386420",
+"919931308242",
+"918809162420"
+];
+
+for(var i=0; i<numbers.length; i++){
+window.open("https://wa.me/" + numbers[i] + "?text=" + message, "_blank");
+}
+}
+</script>
 </body>
   </html>
