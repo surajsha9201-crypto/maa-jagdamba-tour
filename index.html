@@ -10,7 +10,7 @@
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#1e3c72;
+background:linear-gradient(to right,#1e3c72,#2a5298);
 }
 
 .header{
@@ -24,26 +24,36 @@ padding:15px;
 margin:0;
 font-size:22px;
 font-weight:900;
-letter-spacing:1px;
 }
 
 .header p{
-margin:3px;
+margin:4px;
 font-weight:bold;
 color:#ffd700;
+}
+
+.hero img{
+width:100%;
+height:250px;
+object-fit:cover;
 }
 
 .section{
 background:white;
 margin:15px;
 padding:15px;
-border-radius:10px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
-input, select, textarea{
+h3{
+margin-top:0;
+}
+
+input,select,textarea{
 width:100%;
 padding:8px;
-margin:5px 0;
+margin:6px 0;
 border-radius:6px;
 border:1px solid #ccc;
 }
@@ -75,42 +85,8 @@ width:100%;
 border-radius:8px;
 }
 
-.contact-section{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.contact-card{
-background:#f2f2f2;
-padding:10px;
-border-radius:8px;
-width:150px;
-text-align:center;
-}
-
-.call-btn{
-display:block;
-background:#1e3c72;
-color:white;
-padding:5px;
-margin:5px 0;
-text-decoration:none;
-border-radius:6px;
-}
-
-.wa-btn{
-display:block;
-background:#25D366;
-color:white;
-padding:5px;
-text-decoration:none;
-border-radius:6px;
-}
-
 .qr{
-width:200px;
+width:220px;
 display:block;
 margin:auto;
 }
@@ -128,10 +104,23 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:12px;
+padding:14px;
 border-radius:50%;
-font-size:20px;
+font-size:22px;
 text-decoration:none;
+}
+
+.chardham img{
+width:100%;
+border-radius:10px;
+}
+
+.date-card{
+background:#f8f8f8;
+padding:10px;
+border-radius:8px;
+margin:8px 0;
+font-weight:bold;
 }
 
 </style>
@@ -144,20 +133,34 @@ text-decoration:none;
 <p>📍 Sarath, Deoghar, Jharkhand</p>
 </div>
 
+<div class="hero">
+<img src="kedarnath.jpg">
+</div>
+
+<div class="section">
+<h3>🕉 Chardham Yatra 2026 Opening Dates</h3>
+
+<div class="date-card">Kedarnath – 22 April 2026</div>
+<div class="date-card">Badrinath – 23 April 2026</div>
+<div class="date-card">Gangotri – 19 April 2026</div>
+<div class="date-card">Yamunotri – 19 April 2026</div>
+
+<img src="chardham2026.jpg">
+</div>
+
 <div class="section">
 <h3>📝 Online Booking</h3>
+
 <input type="text" placeholder="Your Name">
 <input type="tel" placeholder="Mobile Number">
 <input type="text" placeholder="Pickup Location">
 <input type="text" placeholder="Drop Location">
 
-<label>📅 Travel Date</label>
-<input type="date" id="travelDate">
+<label>Travel Date</label>
+<input type="date">
 
-<label>📆 Return Date</label>
-<input type="date" id="returnDate">
-
-<p id="tripDuration" style="color:green;font-weight:bold;"></p>
+<label>Return Date</label>
+<input type="date">
 
 <select>
 <option>26 Seater AC</option>
@@ -170,112 +173,37 @@ text-decoration:none;
 </div>
 
 <div class="section">
-<h3>📞 Contact Numbers</h3>
+<h3>💰 30% Advance Payment</h3>
+<p style="color:red;font-weight:bold;">All Bookings Require 30% Advance</p>
 
-<div class="contact-section">
+<input type="number" id="totalAmount" placeholder="Enter Total Amount">
+<button onclick="calculateAdvance()">Calculate</button>
 
-<div class="contact-card">
-<h4>🏢 Office</h4>
-<a href="tel:9102386420" class="call-btn">Call</a>
-<a href="https://wa.me/919102386420" class="wa-btn">WhatsApp</a>
-</div>
-
-<div class="contact-card">
-<h4>👤 Bikram</h4>
-<a href="tel:9931308242" class="call-btn">Call</a>
-<a href="https://wa.me/919931308242" class="wa-btn">WhatsApp</a>
-</div>
-
-<div class="contact-card">
-<h4>👤 Chotu</h4>
-<a href="tel:8809162420" class="call-btn">Call</a>
-<a href="https://wa.me/918809162420" class="wa-btn">WhatsApp</a>
-</div>
-
-</div>
-</div>
-
-<div class="section">
-<h3>💰 Tour Packages</h3>
-<p>🌊 Puri – ₹2500 Per Person</p>
-<p>🙏 Rajrappa – ₹800 Per Person</p>
-<p>🚩 Ayodhya – ₹3000 Per Person</p>
-</div>
-
-<div class="section">
-<h3>📷 Tour Gallery</h3>
-<div class="gallery">
-
-<div class="card">
-<img src="puri1.jpg">
-<p>Jagannath Temple</p>
-</div>
-
-<div class="card">
-<img src="puri2.jpg">
-<p>Puri Temple View</p>
-</div>
-
-<div class="card">
-<img src="rajrappa1.jpg">
-<p>Rajrappa River</p>
-</div>
-
-<div class="card">
-<img src="rajrappa2.jpg">
-<p>Temple Entrance</p>
-</div>
-
-<div class="card">
-<img src="rammandir1.jpg">
-<p>Ram Mandir</p>
-</div>
-
-<div class="card">
-<img src="premmandir1.jpg">
-<p>Prem Mandir</p>
-</div>
-
-<div class="card">
-<img src="ujjain.jpg">
-<p>Mahakaleshwar</p>
-</div>
-
-</div>
-</div>
-
-<div class="section">
-<h3>💳 Online Payment</h3>
-<p style="color:red;font-weight:bold;">⚠ All Bookings Require 30% Advance Payment</p>
-
-<input type="number" id="totalAmount" placeholder="Enter Total Package Amount">
-<button onclick="calculateAdvance()">Calculate 30% Advance</button>
-
-<p id="advanceResult" style="font-weight:bold;color:green;"></p>
+<p id="result" style="font-weight:bold;color:green;"></p>
 
 <img src="payment-qr.png" class="qr">
 
-<p>UPI ID: 9931135008@okbizaxis</p>
-<p style="color:green;font-weight:bold;">Scan & Pay via Google Pay / PhonePe / Paytm</p>
+<p>UPI: 9931135008@okbizaxis</p>
+<p style="color:green;font-weight:bold;">Scan via GPay / PhonePe / Paytm</p>
 </div>
 
 <div class="section">
-<h3>⭐ Customer Reviews</h3>
-<p>⭐⭐⭐⭐⭐ Excellent Service – Rani Kumari</p>
-<p>⭐⭐⭐⭐⭐ Safe & Comfortable – Sunita Devi</p>
-<p>⭐⭐⭐⭐ Affordable & On Time – Manoj Singh</p>
+<h3>📞 Contact</h3>
+<p>Office: 9102386420</p>
+<p>Bikram: 9931308242</p>
+<p>Chotu: 8809162420</p>
 </div>
 
 <div class="section">
-<h3>📍 Our Location</h3>
+<h3>📍 Location</h3>
 <iframe src="https://maps.google.com/maps?q=sarath%20deoghar&t=&z=13&ie=UTF8&iwloc=&output=embed"
 width="100%" height="200"></iframe>
 </div>
 
 <div class="footer">
 Maa Jagdamba Tour & Travel <br>
-📞 9102386420 | 9931308242 | 8809162420 <br>
-All Rights Reserved © 2026
+9102386420 | 9931308242 | 8809162420 <br>
+© 2026 All Rights Reserved
 </div>
 
 <a href="https://wa.me/919931308242" class="floating-wa">💬</a>
@@ -284,22 +212,10 @@ All Rights Reserved © 2026
 function calculateAdvance(){
 var total=document.getElementById("totalAmount").value;
 var advance=total*0.30;
-document.getElementById("advanceResult").innerHTML=
+document.getElementById("result").innerHTML=
 "30% Advance = ₹ "+advance;
 }
-
-function calculateDays(){
-const start=new Date(document.getElementById("travelDate").value);
-const end=new Date(document.getElementById("returnDate").value);
-if(start && end && end>=start){
-const diff=(end-start)/(1000*60*60*24)+1;
-document.getElementById("tripDuration").innerHTML=
-"🕒 Total Trip: "+diff+" Days";
-}
-}
-document.getElementById("travelDate").addEventListener("change",calculateDays);
-document.getElementById("returnDate").addEventListener("change",calculateDays);
 </script>
 
 </body>
-  </html>
+</html>
