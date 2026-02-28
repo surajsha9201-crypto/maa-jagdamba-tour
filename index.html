@@ -6,11 +6,10 @@
 <title>Maa Jagdamba Tour & Travel</title>
 
 <style>
-
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#1e3c72;
+background:linear-gradient(to right,#1e3c72,#2a5298);
 }
 
 .header{
@@ -37,13 +36,14 @@ color:#ffd700;
 background:white;
 margin:15px;
 padding:15px;
-border-radius:10px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
 input, select, textarea{
 width:100%;
 padding:8px;
-margin:5px 0;
+margin:6px 0;
 border-radius:6px;
 border:1px solid #ccc;
 }
@@ -94,7 +94,7 @@ text-align:center;
 display:block;
 background:#1e3c72;
 color:white;
-padding:5px;
+padding:6px;
 margin:5px 0;
 text-decoration:none;
 border-radius:6px;
@@ -104,7 +104,7 @@ border-radius:6px;
 display:block;
 background:#25D366;
 color:white;
-padding:5px;
+padding:6px;
 text-decoration:none;
 border-radius:6px;
 }
@@ -128,12 +128,11 @@ bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:12px;
+padding:14px;
 border-radius:50%;
-font-size:20px;
+font-size:22px;
 text-decoration:none;
 }
-
 </style>
 </head>
 
@@ -146,6 +145,7 @@ text-decoration:none;
 
 <div class="section">
 <h3>📝 Online Booking</h3>
+
 <input type="text" placeholder="Your Name">
 <input type="tel" placeholder="Mobile Number">
 <input type="text" placeholder="Pickup Location">
@@ -237,7 +237,7 @@ text-decoration:none;
 </div>
 
 <div class="card">
-<img src="ujjain1.jpeg">
+<img src="Ujjain1.jpeg">
 <p>Mahakaleshwar</p>
 </div>
 
@@ -302,224 +302,4 @@ document.getElementById("returnDate").addEventListener("change",calculateDays);
 </script>
 
 </body>
-</html><!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maa Jagdamba Tour & Travel</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:linear-gradient(to right,#1e3c72,#2a5298);
-}
-
-.header{
-background:#0f2c5c;
-color:white;
-text-align:center;
-padding:15px;
-}
-
-.header h1{
-margin:0;
-font-size:22px;
-font-weight:900;
-}
-
-.header p{
-margin:4px;
-font-weight:bold;
-color:#ffd700;
-}
-
-.hero img{
-width:100%;
-height:250px;
-object-fit:cover;
-}
-
-.section{
-background:white;
-margin:15px;
-padding:15px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-h3{
-margin-top:0;
-}
-
-input,select,textarea{
-width:100%;
-padding:8px;
-margin:6px 0;
-border-radius:6px;
-border:1px solid #ccc;
-}
-
-button{
-background:green;
-color:white;
-padding:8px 12px;
-border:none;
-border-radius:6px;
-font-weight:bold;
-cursor:pointer;
-}
-
-.gallery{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-justify-content:center;
-}
-
-.card{
-width:120px;
-text-align:center;
-}
-
-.card img{
-width:100%;
-border-radius:8px;
-}
-
-.qr{
-width:220px;
-display:block;
-margin:auto;
-}
-
-.footer{
-background:black;
-color:white;
-text-align:center;
-padding:10px;
-}
-
-.floating-wa{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:14px;
-border-radius:50%;
-font-size:22px;
-text-decoration:none;
-}
-
-.chardham img{
-width:100%;
-border-radius:10px;
-}
-
-.date-card{
-background:#f8f8f8;
-padding:10px;
-border-radius:8px;
-margin:8px 0;
-font-weight:bold;
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="header">
-<h1>🚍 MAA Jagdamba Tour & Travel</h1>
-<p>📍 Sarath, Deoghar, Jharkhand</p>
-</div>
-
-<div class="hero">
-<img src="kedarnath.jpg">
-</div>
-
-<div class="section">
-<h3>🕉 Chardham Yatra 2026 Opening Dates</h3>
-
-<div class="date-card">Kedarnath – 22 April 2026</div>
-<div class="date-card">Badrinath – 23 April 2026</div>
-<div class="date-card">Gangotri – 19 April 2026</div>
-<div class="date-card">Yamunotri – 19 April 2026</div>
-
-<img src="chardham2026.jpg">
-</div>
-
-<div class="section">
-<h3>📝 Online Booking</h3>
-
-<input type="text" placeholder="Your Name">
-<input type="tel" placeholder="Mobile Number">
-<input type="text" placeholder="Pickup Location">
-<input type="text" placeholder="Drop Location">
-
-<label>Travel Date</label>
-<input type="date">
-
-<label>Return Date</label>
-<input type="date">
-
-<select>
-<option>26 Seater AC</option>
-<option>17 Seater</option>
-<option>12 Seater</option>
-</select>
-
-<textarea placeholder="Extra Details"></textarea>
-<button>Submit Booking</button>
-</div>
-
-<div class="section">
-<h3>💰 30% Advance Payment</h3>
-<p style="color:red;font-weight:bold;">All Bookings Require 30% Advance</p>
-
-<input type="number" id="totalAmount" placeholder="Enter Total Amount">
-<button onclick="calculateAdvance()">Calculate</button>
-
-<p id="result" style="font-weight:bold;color:green;"></p>
-
-<img src="payment-qr.png" class="qr">
-
-<p>UPI: 9931135008@okbizaxis</p>
-<p style="color:green;font-weight:bold;">Scan via GPay / PhonePe / Paytm</p>
-</div>
-
-<div class="section">
-<h3>📞 Contact</h3>
-<p>Office: 9102386420</p>
-<p>Bikram: 9931308242</p>
-<p>Chotu: 8809162420</p>
-</div>
-
-<div class="section">
-<h3>📍 Location</h3>
-<iframe src="https://maps.google.com/maps?q=sarath%20deoghar&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="200"></iframe>
-</div>
-
-<div class="footer">
-Maa Jagdamba Tour & Travel <br>
-9102386420 | 9931308242 | 8809162420 <br>
-© 2026 All Rights Reserved
-</div>
-
-<a href="https://wa.me/919931308242" class="floating-wa">💬</a>
-
-<script>
-function calculateAdvance(){
-var total=document.getElementById("totalAmount").value;
-var advance=total*0.30;
-document.getElementById("result").innerHTML=
-"30% Advance = ₹ "+advance;
-}
-</script>
-
-</body>
-</html>
+  </html>
