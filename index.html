@@ -66,8 +66,12 @@ border-radius:8px;
 }
 
 .qr{
-width:200px;
-margin:10px 0;
+width:100%;
+max-width:250px;
+height:auto;
+margin:15px auto;
+display:block;
+border-radius:10px;
 }
 
 .footer{
@@ -87,6 +91,12 @@ border-radius:50px;
 text-decoration:none;
 font-size:14px;
 }
+
+.slider img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
 </style>
 </head>
 
@@ -97,32 +107,44 @@ font-size:14px;
 📍 Sarath, Deoghar, Jharkhand
 </div>
 
+<!-- SLIDER -->
+<div class="slider">
+<img id="slideImg" src="puri1.jpg.jpeg">
+</div>
+
+<!-- BOOKING -->
 <div class="section">
 <h3>Online Booking</h3>
-<input type="text" placeholder="Your Name">
-<input type="number" placeholder="Mobile Number">
-<input type="text" placeholder="Pickup Location">
-<input type="text" placeholder="Drop Location">
-<input type="date">
-<select>
+
+<input type="text" id="name" placeholder="Your Name">
+<input type="number" id="mobile" placeholder="Mobile Number">
+<input type="text" id="pickup" placeholder="Pickup Location">
+<input type="text" id="drop" placeholder="Drop Location">
+<input type="date" id="date">
+
+<select id="vehicle">
 <option>26 Seater AC</option>
 <option>26 Seater Non AC</option>
 <option>Car Rental</option>
 </select>
-<textarea placeholder="Extra Details"></textarea>
-<button>Submit Booking</button>
+
+<textarea id="details" placeholder="Extra Details"></textarea>
+
+<button onclick="sendWhatsApp()">Submit Booking</button>
 
 <h4>Contact Numbers</h4>
 <p>📞 9102386420 | 9931308242 | 8809162420</p>
 </div>
 
+<!-- PACKAGES -->
 <div class="section">
 <h3>💰 Tour Packages</h3>
-<p>🌊 Puri Package - ₹2500 Per Person</p>
+<p>🌊 Puri - ₹2500 Per Person</p>
 <p>🙏 Rajrappa - ₹800 Per Person</p>
 <p>🚩 Ayodhya - ₹3000 Per Person</p>
 </div>
 
+<!-- GALLERY -->
 <div class="section">
 <h3>📸 Tour Gallery</h3>
 <div class="gallery">
@@ -165,15 +187,36 @@ font-size:14px;
 </div>
 </div>
 
+<!-- PAYMENT -->
 <div class="section">
 <h3>💳 Online Payment</h3>
+
+<p style="color:red;font-weight:bold;">
+⚠ All Bookings Require 30% Advance Payment
+</p>
+
+<h4>30% Advance Calculator</h4>
+<input type="number" id="totalAmount" placeholder="Enter Total Package Amount">
+<button onclick="calculateAdvance()">Calculate 30% Advance</button>
+<p id="advanceResult" style="font-weight:bold;color:red;"></p>
+
 <img src="payment-qr.png" class="qr">
-<p>UPI ID: 9931135008@okbizaxis</p>
+
+<p><b>UPI ID:</b> 9931135008@okbizaxis</p>
 <p style="color:green;font-weight:bold;">
 Scan & Pay via Google Pay / PhonePe / Paytm
 </p>
 </div>
 
+<!-- REVIEWS -->
+<div class="section">
+<h3>⭐ Customer Reviews</h3>
+<p>⭐⭐⭐⭐⭐ Excellent Service – Ravi Kumar</p>
+<p>⭐⭐⭐⭐⭐ Safe & Comfortable Journey – Sunita Devi</p>
+<p>⭐⭐⭐⭐ Affordable & On Time – Manoj Singh</p>
+</div>
+
+<!-- LOCATION -->
 <div class="section">
 <h3>📍 Our Location</h3>
 <iframe src="https://maps.google.com/maps?q=Sarath%20Deoghar&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -190,5 +233,53 @@ All Rights Reserved © 2026
 💬 Chat
 </a>
 
+<script>
+function sendWhatsApp(){
+var name=document.getElementById("name").value;
+var mobile=document.getElementById("mobile").value;
+var pickup=document.getElementById("pickup").value;
+var drop=document.getElementById("drop").value;
+var date=document.getElementById("date").value;
+var vehicle=document.getElementById("vehicle").value;
+var details=document.getElementById("details").value;
+
+var url="https://wa.me/9199331308242?text="
++"*New Booking*%0a"
++"Name: "+name+"%0a"
++"Mobile: "+mobile+"%0a"
++"Pickup: "+pickup+"%0a"
++"Drop: "+drop+"%0a"
++"Date: "+date+"%0a"
++"Vehicle: "+vehicle+"%0a"
++"Details: "+details;
+
+window.open(url,'_blank');
+}
+
+function calculateAdvance(){
+var total=document.getElementById("totalAmount").value;
+if(total==""){
+alert("Enter amount");
+return;
+}
+var advance=total*0.30;
+document.getElementById("advanceResult").innerHTML=
+"30% Advance Payment = ₹"+advance;
+}
+
+var images=[
+"puri1.jpg.jpeg",
+"rajrappa1.jpg.jpeg",
+"rammandir1.jpg.jpeg"
+];
+
+var i=0;
+setInterval(function(){
+i++;
+if(i>=images.length){i=0;}
+document.getElementById("slideImg").src=images[i];
+},3000);
+</script>
+
 </body>
-</html>
+  </html>
