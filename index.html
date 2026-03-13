@@ -1,8 +1,6 @@
 <!DOCTYPE html><html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maa Jagdamba Tour & Travel</title><style>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Maa Jagdamba Tour & Travel Sarath Deoghar | Bus Booking</title><meta name="description" content="Maa Jagdamba Tour & Travel Sarath Deoghar. Bus booking service for Puri tour, Ayodhya tour, Rajrappa tour, Barati bus booking and All India tour service."><meta name="keywords" content="Sarath bus booking, Deoghar tour travel, Puri tour bus, Ayodhya tour bus, Rajrappa tour bus, Barati bus booking Sarath"><meta name="author" content="Maa Jagdamba Tour & Travel"><style>
 
 body{
 font-family:Arial;
@@ -62,15 +60,35 @@ border-radius:6px;
 margin-top:10px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:8px;
+.slider{
+width:100%;
+height:220px;
+overflow:hidden;
+position:relative;
+border-radius:8px;
 }
 
-.gallery img{
+.slide{
 width:100%;
-border-radius:6px;
+height:220px;
+position:absolute;
+animation:slideShow 21s infinite;
+}
+
+.slide:nth-child(1){animation-delay:0s;}
+.slide:nth-child(2){animation-delay:3s;}
+.slide:nth-child(3){animation-delay:6s;}
+.slide:nth-child(4){animation-delay:9s;}
+.slide:nth-child(5){animation-delay:12s;}
+.slide:nth-child(6){animation-delay:15s;}
+.slide:nth-child(7){animation-delay:18s;}
+
+@keyframes slideShow{
+0%{opacity:0;}
+5%{opacity:1;}
+20%{opacity:1;}
+25%{opacity:0;}
+100%{opacity:0;}
 }
 
 .float{
@@ -111,16 +129,22 @@ text-decoration:none;
 <option>Puri Tour</option>
 <option>Ayodhya Tour</option>
 <option>Rajrappa Tour</option>
-</select><button onclick="sendBooking()">Submit Booking</button>
+<option>Private Booking (Marriage / All India Tour)</option>
+</select><input id="details" placeholder="Private Booking Details"><button onclick="sendBooking()">Submit Booking</button>
 
 </div><div class="box">🚌 Seats Remaining: <span id="seat">26</span>
 
-</div><div class="box"><h3>Tour Gallery</h3><div class="gallery"><img src="puri1.jpeg">
-<img src="puri2.jpeg"><img src="rajrappa1.jpeg">
-<img src="rajrappa2.jpg"><img src="rammandir1.jpeg">
-<img src="rammandir2.jpeg"><img src="premmandir1.jpeg">
-<img src="premmandir2.jpeg"><img src="varanasi1.jpeg">
-<img src="varanasi2.jpeg"><img src="ujjain1.jpeg"></div></div><div class="box"><h3>Contact Numbers</h3>📞 Office: 7004470872
+</div><div class="box"><h3>Recent Bookings</h3><ul id="bookingList"></ul></div><div class="box"><h3>Tour Slider</h3><div class="slider"><img class="slide" src="puri1.jpeg">
+<img class="slide" src="puri2.jpeg">
+<img class="slide" src="rajrappa1.jpeg">
+<img class="slide" src="rammandir1.jpeg">
+<img class="slide" src="premmandir1.jpeg">
+<img class="slide" src="varanasi1.jpeg">
+<img class="slide" src="ujjain1.jpeg"></div></div><div class="box"><h3>Advance Calculator</h3><input id="amount" placeholder="Enter Tour Amount"><button onclick="calc()">Calculate 30% Advance</button>
+
+<p id="result"></p></div><div class="box"><h3>Our Location</h3><iframe
+src="https://maps.google.com/maps?q=sarath%20deoghar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="250"></iframe></div><div class="box"><h3>Contact Numbers</h3>📞 Office: 7004470872
 <br>
 📞 Bikram: 9931308242
 <br>
@@ -139,7 +163,6 @@ text-decoration:none;
 </div><script>
 
 let count=Math.floor(Math.random()*15)+3;
-
 document.getElementById("visitors").innerText=count;
 
 let seat=26;
@@ -147,70 +170,51 @@ let seat=26;
 function sendBooking(){
 
 let name=document.getElementById("name").value;
-
-if(seat<=0){
-
-alert("No Seats Available");
-
-return;
-
-}
-
-seat--;
-
-document.getElementById("seat").innerText=seat;
-
 let mobile=document.getElementById("mobile").value;
 let pickup=document.getElementById("pickup").value;
 let drop=document.getElementById("drop").value;
 let pack=document.getElementById("package").value;
+let details=document.getElementById("details").value;
 
-let msg="Hello Maa Jagdamba Travel %0A Name:"+name+" %0A Mobile:"+mobile+" %0A Pickup:"+pickup+" %0A Drop:"+drop+" %0A Package:"+pack;
+if(name=="" || mobile==""){
+alert("Please fill name and mobile");
+return;
+}
+
+if(seat<=0){
+alert("No Seats Available");
+return;
+}
+
+seat--;
+document.getElementById("seat").innerText=seat;
+
+let bookingList=document.getElementById("bookingList");
+let li=document.createElement("li");
+li.innerText=name+" booked "+pack;
+bookingList.prepend(li);
+
+let msg="Hello Maa Jagdamba Travel %0A"+
+"Name:"+name+" %0A"+
+"Mobile:"+mobile+" %0A"+
+"Pickup:"+pickup+" %0A"+
+"Drop:"+drop+" %0A"+
+"Package:"+pack+" %0A"+
+"Details:"+details;
 
 window.open("https://wa.me/917004470872?text="+msg);
-<div class="box"><h3>Tour Gallery</h3><div class="slider"><img class="slide" src="puri1.jpeg">
-<img class="slide" src="puri2.jpeg">
-<img class="slide" src="rajrappa1.jpeg">
-<img class="slide" src="rammandir1.jpeg">
-<img class="slide" src="premmandir1.jpeg">
-<img class="slide" src="varanasi1.jpeg">
-<img class="slide" src="ujjain1.jpeg"></div></div><style>
-
-.slider{
-width:100%;
-height:220px;
-overflow:hidden;
-position:relative;
-border-radius:8px;
-}
-
-.slide{
-width:100%;
-height:220px;
-position:absolute;
-animation:slideShow 21s infinite;
-}
-
-.slide:nth-child(1){animation-delay:0s;}
-.slide:nth-child(2){animation-delay:3s;}
-.slide:nth-child(3){animation-delay:6s;}
-.slide:nth-child(4){animation-delay:9s;}
-.slide:nth-child(5){animation-delay:12s;}
-.slide:nth-child(6){animation-delay:15s;}
-.slide:nth-child(7){animation-delay:18s;}
-
-@keyframes slideShow{
-
-0%{opacity:0;}
-5%{opacity:1;}
-20%{opacity:1;}
-25%{opacity:0;}
-100%{opacity:0;}
 
 }
 
-</style>
+function calc(){
+
+let amount=document.getElementById("amount").value;
+
+let advance=amount*0.30;
+
+document.getElementById("result").innerText="Advance Pay: ₹"+advance;
+
 }
 
 </script></body>
-</html>
+  </html>
