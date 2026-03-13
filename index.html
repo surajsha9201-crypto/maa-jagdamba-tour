@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en">
 <head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Maa Jagdamba Tour & Travel Sarath Deoghar | Bus Booking</title><meta name="description" content="Maa Jagdamba Tour & Travel Sarath Deoghar. Bus booking service for Puri tour, Ayodhya tour, Rajrappa tour, Barati bus booking and All India tour service."><meta name="keywords" content="Sarath bus booking, Deoghar tour travel, Puri tour bus, Ayodhya tour bus, Rajrappa tour bus, Barati bus booking Sarath"><meta name="author" content="Maa Jagdamba Tour & Travel"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Maa Jagdamba Tour & Travel Sarath Deoghar</title><meta name="description" content="Maa Jagdamba Tour & Travel Sarath Deoghar. Bus booking service for Puri, Ayodhya, Rajrappa and All India tour."><meta name="keywords" content="Sarath bus booking, Deoghar travel, Puri tour bus, Ayodhya tour bus"><style>
 
 body{
 font-family:Arial;
@@ -13,12 +13,12 @@ background:#0b3d91;
 color:white;
 text-align:center;
 padding:15px;
-font-size:20px;
+font-size:22px;
 font-weight:bold;
 }
 
 .offer{
-background:#ff2a2a;
+background:red;
 color:white;
 text-align:center;
 padding:8px;
@@ -55,9 +55,9 @@ font-size:16px;
 
 .box{
 background:white;
-padding:10px;
+padding:12px;
 border-radius:6px;
-margin-top:10px;
+margin-top:12px;
 }
 
 .slider{
@@ -84,11 +84,13 @@ animation:slideShow 21s infinite;
 .slide:nth-child(7){animation-delay:18s;}
 
 @keyframes slideShow{
+
 0%{opacity:0;}
 5%{opacity:1;}
 20%{opacity:1;}
 25%{opacity:0;}
 100%{opacity:0;}
+
 }
 
 .float{
@@ -119,22 +121,17 @@ text-decoration:none;
 </style></head><body><div class="header">
 🚐 Maa Jagdamba Tour & Travel Sarath, Deoghar
 </div><div class="offer">
-🔥 Today Offer: Puri Tour ₹2500 → ₹2200
+🔥 Special Offer: Puri Tour Discount Available
 </div><div class="counter">
 👀 <span id="visitors"></span> People Viewing This Website
-</div><div class="container"><div class="box"><h3>Online Booking</h3><input id="name" placeholder="Your Name">
-<input id="mobile" placeholder="Mobile Number">
-<input id="pickup" placeholder="Pickup Location">
-<input id="drop" placeholder="Drop Location"><select id="package">
-<option>Puri Tour</option>
+</div><div class="container"><div class="box"><h3>Online Booking</h3><input id="name" placeholder="Your Name"><input id="mobile" placeholder="Mobile Number"><input id="pickup" placeholder="Pickup Location"><input id="drop" placeholder="Drop Location"><select id="package"><option>Puri Tour</option>
 <option>Ayodhya Tour</option>
 <option>Rajrappa Tour</option>
-<option>Private Booking (Marriage / All India Tour)</option>
-</select><input id="details" placeholder="Private Booking Details"><button onclick="sendBooking()">Submit Booking</button>
+<option>Private Booking (Marriage / All India Tour)</option></select><input id="details" placeholder="Private Booking Details"><button onclick="sendBooking()">Submit Booking</button>
 
 </div><div class="box">🚌 Seats Remaining: <span id="seat">26</span>
 
-</div><div class="box"><h3>Recent Bookings</h3><ul id="bookingList"></ul></div><div class="box"><h3>Tour Slider</h3><div class="slider"><img class="slide" src="puri1.jpeg">
+</div><div class="box"><h3>Recent Bookings</h3><ul id="bookingList"></ul></div><div class="box"><h3>Tour Gallery</h3><div class="slider"><img class="slide" src="puri1.jpeg">
 <img class="slide" src="puri2.jpeg">
 <img class="slide" src="rajrappa1.jpeg">
 <img class="slide" src="rammandir1.jpeg">
@@ -202,7 +199,17 @@ let msg="Hello Maa Jagdamba Travel %0A"+
 "Package:"+pack+" %0A"+
 "Details:"+details;
 
-window.open("https://wa.me/917004470872?text="+msg);
+let numbers=[
+"917004470872",
+"919931308242",
+"918809162420"
+];
+
+numbers.forEach(function(num){
+
+window.open("https://wa.me/"+num+"?text="+msg);
+
+});
 
 }
 
