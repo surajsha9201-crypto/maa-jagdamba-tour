@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en">
 <head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="google-site-verification" content="BuUgwQJ-hVHGGzjVjQumt54MmfzZgWg8aezXh5_Dv1Q" /><title>Maa Jagdamba Tour & Travel Sarath Deoghar | Bus Booking Deoghar</title><meta name="description" content="Best Tour & Travel Service in Sarath Deoghar Jharkhand. Puri Tour, Ayodhya Tour, Rajrappa Tour Bus Booking from Deoghar."><meta name="keywords" content="Tour Travel Deoghar, Bus Booking Deoghar, Puri Tour Deoghar, Ayodhya Tour Deoghar"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="google-site-verification" content="BuUgwQJ-hVHGGzjVjQumt54MmfzZgWg8aezXh5_Dv1Q" /><title>Maa Jagdamba Tour & Travel Sarath Deoghar | Tour Travel Deoghar</title><meta name="description" content="Best Tour Travel Service in Deoghar Jharkhand. Puri Tour, Ayodhya Tour, Rajrappa Tour Bus Booking from Deoghar."><meta name="keywords" content="Tour Travel Deoghar, Bus Booking Deoghar, Puri Tour Deoghar, Ayodhya Tour Deoghar"><style>
 
 body{
 font-family:Arial;
@@ -106,7 +106,7 @@ text-decoration:none;
 </div><div class="offer">
 🔥 Puri Tour Special Offer From Deoghar
 </div><div class="viewer">
-👀 <span id="viewer">15</span> People Viewing This Website
+👀 <span id="viewer">12</span> People Viewing This Website
 </div><div class="container"><div class="card slider">
 <img id="slide" src="puri1.jpeg">
 </div><div class="card"><h2>Online Booking</h2><input id="name" placeholder="Your Name"><input id="mobile" placeholder="Mobile Number"><input id="pickup" placeholder="Pickup Location"><input id="drop" placeholder="Drop Location"><select id="tour"><option>Puri Tour</option>
@@ -129,15 +129,13 @@ text-decoration:none;
 <img src="varanasi1.jpeg">
 <img src="varanasi2.jpeg"></div></div><div class="card"><h3>Our Location (Deoghar)</h3><iframe
 src="https://maps.google.com/maps?q=deoghar%20jharkhand&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="250"></iframe></div><div class="card"><h3>Contact Numbers</h3>📞 Office: 7004470872
-<br>
-📞 Bikram: 9931308242
-<br>
+width="100%" height="250"></iframe></div><div class="card"><h3>Contact Numbers</h3>📞 Office: 7004470872 <br>
+📞 Bikram: 9931308242 <br>
 📞 Chhotu: 8809162420
 
-</div></div><a class="call" href="tel:7004470872">📞 Call Office</a>
+</div></div><a class="call" onclick="callMenu()">📞 Call</a>
 
-<a class="whatsapp" href="https://wa.me/917004470872">💬 WhatsApp</a>
+<a class="whatsapp" onclick="whatsappMenu()">💬 WhatsApp</a>
 
 <script>
 
@@ -184,6 +182,26 @@ document.getElementById("advance").innerText="Advance: ₹"+adv
 
 }
 
+function callMenu(){
+
+var number=prompt("Call:\n1 Office\n2 Bikram\n3 Chhotu")
+
+if(number==1){window.location="tel:7004470872"}
+if(number==2){window.location="tel:9931308242"}
+if(number==3){window.location="tel:8809162420"}
+
+}
+
+function whatsappMenu(){
+
+var number=prompt("WhatsApp:\n1 Office\n2 Bikram\n3 Chhotu")
+
+if(number==1){window.open("https://wa.me/917004470872")}
+if(number==2){window.open("https://wa.me/919931308242")}
+if(number==3){window.open("https://wa.me/918809162420")}
+
+}
+
 setInterval(function(){
 
 var x=Math.floor(Math.random()*10)+10
@@ -210,4 +228,4 @@ document.getElementById("slide").src=images[i]
 },3000)
 
 </script></body>
-</html>
+  </html>
