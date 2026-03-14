@@ -1,15 +1,15 @@
 <!DOCTYPE html><html lang="en">
 <head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Maa Jagdamba Tour & Travel Sarath Deoghar</title><meta name="description" content="Maa Jagdamba Tour & Travel Sarath Deoghar Bus Booking Service"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="google-site-verification" content="BuUgwQJ-hVHGGzjVjQumt54MmfzZgWg8aezXh5_Dv1Q" /><title>Maa Jagdamba Tour & Travel Sarath Deoghar</title><meta name="description" content="Maa Jagdamba Tour & Travel Sarath Deoghar Bus Booking Service for Puri Ayodhya Rajrappa Tour"><meta name="keywords" content="Tour Travel Sarath, Bus Booking Deoghar, Puri Tour Bus, Ayodhya Tour Bus"><style>
 
 body{
 font-family:Arial;
 margin:0;
-background:#f5f5f5;
+background:#f2f2f2;
 }
 
 .header{
-background:#1f4aa8;
+background:#1f4e92;
 color:white;
 text-align:center;
 padding:15px;
@@ -21,221 +21,186 @@ font-weight:bold;
 background:red;
 color:white;
 text-align:center;
-padding:8px;
+padding:10px;
 font-weight:bold;
 }
 
-.counter{
+.viewer{
 text-align:center;
-padding:10px;
-font-weight:bold;
+margin:10px;
+font-size:18px;
 }
 
 .container{
 padding:15px;
 }
 
-.box{
+.card{
 background:white;
 padding:15px;
-border-radius:8px;
-margin-top:12px;
+border-radius:10px;
+margin-bottom:15px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
 }
 
-input,select{
+input,select,textarea{
 width:100%;
 padding:10px;
-margin:6px 0;
-border-radius:6px;
+margin:5px 0;
+border-radius:5px;
 border:1px solid #ccc;
 }
 
 button{
 width:100%;
 padding:12px;
-background:#28a745;
+background:green;
 color:white;
 border:none;
-border-radius:6px;
+border-radius:5px;
 font-size:16px;
 }
 
-.slider{
+.slider img{
 width:100%;
 height:220px;
-overflow:hidden;
-position:relative;
+object-fit:cover;
+border-radius:10px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.gallery img{
+width:100%;
 border-radius:8px;
 }
 
-.slide{
-width:100%;
-height:220px;
-position:absolute;
-animation:slideShow 21s infinite;
-}
-
-.slide:nth-child(1){animation-delay:0s;}
-.slide:nth-child(2){animation-delay:3s;}
-.slide:nth-child(3){animation-delay:6s;}
-.slide:nth-child(4){animation-delay:9s;}
-.slide:nth-child(5){animation-delay:12s;}
-.slide:nth-child(6){animation-delay:15s;}
-.slide:nth-child(7){animation-delay:18s;}
-
-@keyframes slideShow{
-0%{opacity:0;}
-5%{opacity:1;}
-20%{opacity:1;}
-25%{opacity:0;}
-100%{opacity:0;}
-}
-
-.float{
-position:fixed;
-bottom:20px;
-right:20px;
-display:flex;
-flex-direction:column;
-gap:8px;
-}
-
 .call{
-background:#007bff;
+position:fixed;
+bottom:80px;
+right:10px;
+background:#1976d2;
 color:white;
-padding:10px 15px;
-border-radius:30px;
+padding:12px 18px;
+border-radius:25px;
 text-decoration:none;
-font-size:14px;
 }
 
 .whatsapp{
+position:fixed;
+bottom:20px;
+right:10px;
 background:#25D366;
 color:white;
-padding:10px 15px;
-border-radius:30px;
+padding:12px 18px;
+border-radius:25px;
 text-decoration:none;
-font-size:14px;
 }
 
 </style></head><body><div class="header">
 🚐 Maa Jagdamba Tour & Travel Sarath, Deoghar
 </div><div class="offer">
-🔥 Special Offer: Puri Tour Discount Available
-</div><div class="counter">
-👀 <span id="visitors"></span> People Viewing This Website
-</div><div class="container"><div class="box"><h3>Online Booking</h3><input id="name" placeholder="Your Name"><input id="mobile" placeholder="Mobile Number"><input id="pickup" placeholder="Pickup Location"><input id="drop" placeholder="Drop Location"><select id="package">
-<option>Puri Tour</option>
+🔥 Special Offer: Puri Tour Available
+</div><div class="viewer">
+👀 <span id="viewer">15</span> People Viewing This Website
+</div><div class="container"><div class="card slider">
+<img id="slide" src="puri1.jpeg">
+</div><div class="card"><h2>Online Booking</h2><input id="name" placeholder="Your Name"><input id="mobile" placeholder="Mobile Number"><input id="pickup" placeholder="Pickup Location"><input id="drop" placeholder="Drop Location"><select id="tour"><option>Puri Tour</option>
 <option>Ayodhya Tour</option>
 <option>Rajrappa Tour</option>
-<option>Private Booking (Marriage / All India Tour)</option>
-</select><input id="details" placeholder="Private Booking Details"><button onclick="sendBooking()">Submit Booking</button>
+<option>Private Booking</option></select><textarea id="details" placeholder="Private Booking Details"></textarea><button onclick="booking()">Submit Booking</button>
 
-</div><div class="box">
-🚌 Seats Remaining: <span id="seat">26</span>
-</div><div class="box"><h3>Recent Bookings</h3>
-<ul id="bookingList"></ul></div><div class="box"><h3>Tour Gallery</h3><div class="slider"><img class="slide" src="puri1.jpeg">
-<img class="slide" src="puri2.jpeg">
-<img class="slide" src="rajrappa1.jpeg">
-<img class="slide" src="rammandir1.jpeg">
-<img class="slide" src="premmandir1.jpeg">
-<img class="slide" src="varanasi1.jpeg">
-<img class="slide" src="ujjain1.jpeg"></div></div><div class="box"><h3>Advance Calculator</h3><input id="amount" placeholder="Enter Tour Amount"><button onclick="calc()">Calculate 30% Advance</button>
+</div><div class="card"><h3>Seats Remaining</h3><span id="seat">26</span> Seats Available
 
-<p id="result"></p></div><div class="box"><h3>Our Location</h3><iframe
+</div><div class="card"><h3>Recent Bookings</h3><ul id="bookings"></ul></div><div class="card"><h3>Advance Calculator</h3><input id="amount" placeholder="Enter tour amount"><button onclick="calc()">Calculate 30% Advance</button>
+
+<p id="advance"></p></div><div class="card"><h3>Tour Gallery</h3><div class="gallery"><img src="puri1.jpeg">
+<img src="puri2.jpeg">
+<img src="rajrappa1.jpeg">
+<img src="rajrappa2.jpg">
+<img src="rammandir1.jpeg">
+<img src="rammandir2.jpeg">
+<img src="premmandir1.jpeg">
+<img src="premmandir2.jpeg">
+<img src="varanasi1.jpeg">
+<img src="varanasi2.jpeg"></div></div><div class="card"><h3>Our Location</h3><iframe
 src="https://maps.google.com/maps?q=sarath%20deoghar&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="250"></iframe></div><div class="box"><h3>Contact Numbers</h3>📞 Office: 7004470872
+width="100%" height="250"></iframe></div><div class="card"><h3>Contact Numbers</h3>📞 Office: 7004470872
 <br>
 📞 Bikram: 9931308242
 <br>
 📞 Chhotu: 8809162420
 
-</div><div class="box"><h3>Advance Payment</h3><p>All bookings require 30% advance</p><img src="payment-qr.png" width="200"><p>UPI: 9931135008@okbizaxis</p></div><div class="box"><h3>Customer Reviews</h3>⭐⭐⭐⭐⭐ Excellent Service – Rani Kumari
-<br>
-⭐⭐⭐⭐⭐ Safe Travel – Manoj Singh
-<br>
-⭐⭐⭐⭐⭐ Affordable Price – Sunita Devi
+</div></div><a class="call" href="tel:7004470872">📞 Call</a>
 
-</div></div><div class="float"><a href="tel:7004470872" class="call">📞 Office</a>
+<a class="whatsapp" href="https://wa.me/917004470872">💬 WhatsApp</a>
 
-<a href="tel:9931308242" class="call">📞 Bikram</a>
+<script>
 
-<a href="tel:8809162420" class="call">📞 Chhotu</a>
+var seat=26
 
-<a href="https://wa.me/917004470872" class="whatsapp">💬 WhatsApp Office</a>
+function booking(){
 
-<a href="https://wa.me/919931308242" class="whatsapp">💬 WhatsApp Bikram</a>
+var name=document.getElementById("name").value
+var mobile=document.getElementById("mobile").value
+var pickup=document.getElementById("pickup").value
+var drop=document.getElementById("drop").value
+var tour=document.getElementById("tour").value
 
-<a href="https://wa.me/918809162420" class="whatsapp">💬 WhatsApp Chhotu</a>
+var msg="New Booking:%0AName:"+name+"%0AMobile:"+mobile+"%0APickup:"+pickup+"%0ADrop:"+drop+"%0ATour:"+tour
 
-</div><script>
+window.open("https://wa.me/917004470872?text="+msg)
+window.open("https://wa.me/919931308242?text="+msg)
+window.open("https://wa.me/918809162420?text="+msg)
 
-let count=Math.floor(Math.random()*15)+3;
-document.getElementById("visitors").innerText=count;
+seat--
 
-let seat=26;
+document.getElementById("seat").innerText=seat
 
-function sendBooking(){
-
-let name=document.getElementById("name").value;
-let mobile=document.getElementById("mobile").value;
-let pickup=document.getElementById("pickup").value;
-let drop=document.getElementById("drop").value;
-let pack=document.getElementById("package").value;
-let details=document.getElementById("details").value;
-
-if(name=="" || mobile==""){
-alert("Please fill name and mobile");
-return;
-}
-
-if(seat<=0){
-alert("No Seats Available");
-return;
-}
-
-seat--;
-document.getElementById("seat").innerText=seat;
-
-let bookingList=document.getElementById("bookingList");
-
-let li=document.createElement("li");
-
-li.innerText=name+" booked "+pack;
-
-bookingList.prepend(li);
-
-let msg="Hello Maa Jagdamba Travel %0A"+
-"Name:"+name+" %0A"+
-"Mobile:"+mobile+" %0A"+
-"Pickup:"+pickup+" %0A"+
-"Drop:"+drop+" %0A"+
-"Package:"+pack+" %0A"+
-"Details:"+details;
-
-let numbers=[
-"917004470872",
-"919931308242",
-"918809162420"
-];
-
-numbers.forEach(function(num){
-
-window.open("https://wa.me/"+num+"?text="+msg);
-
-});
+var li=document.createElement("li")
+li.innerText=name+" booked "+tour
+document.getElementById("bookings").appendChild(li)
 
 }
 
 function calc(){
 
-let amount=document.getElementById("amount").value;
+var amount=document.getElementById("amount").value
 
-let advance=amount*0.30;
+var adv=amount*0.30
 
-document.getElementById("result").innerText="Advance Pay: ₹"+advance;
+document.getElementById("advance").innerText="Advance: ₹"+adv
 
 }
 
+setInterval(function(){
+
+var x=Math.floor(Math.random()*10)+10
+document.getElementById("viewer").innerText=x
+
+},4000)
+
+var images=[
+"puri1.jpeg",
+"puri2.jpeg",
+"rajrappa1.jpeg",
+"rammandir1.jpeg"
+]
+
+var i=0
+
+setInterval(function(){
+
+i++
+if(i>=images.length){i=0}
+
+document.getElementById("slide").src=images[i]
+
+},3000)
+
 </script></body>
-                                           </html>
+</html>
